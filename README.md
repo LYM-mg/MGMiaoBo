@@ -1,13 +1,14 @@
 # MGMiaoBo
+
 - #第一步：
- - ###下载项目
+ -###下载项目
   
 - #第二步：
- - ###下载framework，拖入项目
-  - ### 链接: https://pan.baidu.com/s/1c2654zu 密码: 6h64
+ -###下载framework，拖入项目
+ -### 链接: https://pan.baidu.com/s/1c2654zu 密码: 6h64
 
 - #第三步：
- - ###解压framework，拖入项目
+ -###解压framework，拖入项目
   
   
   
