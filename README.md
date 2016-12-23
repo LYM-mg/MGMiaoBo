@@ -1,19 +1,17 @@
 # MGMiaoBo
-***
 
 - #第一步：
- -###下载项目
+ - 下载项目
   
 - #第二步：
- -###下载framework，拖入项目
- -### 链接: https://pan.baidu.com/s/1c2654zu 密码: 6h64
+ - 下载framework，拖入项目
+ - 链接: https://pan.baidu.com/s/1c2654zu 密码: 6h64
 
 - #第三步：
- -###解压framework，拖入项目
-  
-  
-  
-  
+ - 解压framework，拖入项目，运行项目即可
+  
+
+  
   
 - #项目图片介绍：
 ![Snip20161026_31.png](http://upload-images.jianshu.io/upload_images/1429890-f3179c973adcc593.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
