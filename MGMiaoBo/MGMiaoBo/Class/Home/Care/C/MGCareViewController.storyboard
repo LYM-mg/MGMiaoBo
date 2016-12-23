@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hGB-Ea-bmu">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Care View Controller-->
+        <scene sceneID="Qpt-Kk-LFH">
+            <objects>
+                <viewController id="hGB-Ea-bmu" customClass="MGCareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Igj-VU-npA"/>
+                        <viewControllerLayoutGuide type="bottom" id="bWH-Nv-vIP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TsG-uL-Yd6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="no_follow_250x247" translatesAutoresizingMaskIntoConstraints="NO" id="o3C-R6-RWj">
+                                <rect key="frame" x="0.0" y="-18" width="320" height="316"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="你关注的主播还未开播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8J-Sw-gby">
+                                <rect key="frame" x="75" y="328" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUW-ti-uQX">
+                                <rect key="frame" x="40" y="379" width="240" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cYH-Ca-QzK"/>
+                                </constraints>
+                                <state key="normal" title="去看看当前热门直播">
+                                    <color key="titleColor" red="1" green="0.16862745098039217" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toSeeHotZone:" destination="hGB-Ea-bmu" eventType="touchUpInside" id="6ET-p4-O6O"/>
+                                    <action selector="toSeeHotZoneTouchUpOutside:" destination="hGB-Ea-bmu" eventType="touchUpOutside" id="gZl-Lq-FpJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VUW-ti-uQX" firstAttribute="top" secondItem="b8J-Sw-gby" secondAttribute="bottom" constant="30" id="3b8-zd-gZU"/>
+                            <constraint firstAttribute="trailing" secondItem="VUW-ti-uQX" secondAttribute="trailing" constant="40" id="A8X-YE-Mxt"/>
+                            <constraint firstItem="o3C-R6-RWj" firstAttribute="centerY" secondItem="TsG-uL-Yd6" secondAttribute="centerY" constant="-100" id="FBn-mh-agE"/>
+                            <constraint firstItem="b8J-Sw-gby" firstAttribute="centerX" secondItem="TsG-uL-Yd6" secondAttribute="centerX" id="Tgi-Rc-RN7"/>
+                            <constraint firstItem="b8J-Sw-gby" firstAttribute="top" secondItem="o3C-R6-RWj" secondAttribute="bottom" constant="30" id="bd9-zF-km5"/>
+                            <constraint firstItem="VUW-ti-uQX" firstAttribute="leading" secondItem="TsG-uL-Yd6" secondAttribute="leading" constant="40" id="dva-tX-LFb"/>
+                            <constraint firstItem="o3C-R6-RWj" firstAttribute="centerX" secondItem="TsG-uL-Yd6" secondAttribute="centerX" id="lgs-4c-WSe"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="careLabel" destination="b8J-Sw-gby" id="GGt-aS-Vj1"/>
+                        <outlet property="toSeeHotBtn" destination="VUW-ti-uQX" id="YDA-dg-iq7"/>
+                        <outlet property="topImageView" destination="o3C-R6-RWj" id="qNf-ro-oWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPZ-DU-QhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="no_follow_250x247" width="320" height="316"/>
+    </resources>
+</document>

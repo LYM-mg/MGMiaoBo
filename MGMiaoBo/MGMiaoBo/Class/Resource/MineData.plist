@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>my_coin_20x20_</string>
+			<key>title</key>
+			<string>我的喵币</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>live_manager_20x20_</string>
+			<key>title</key>
+			<string>直播间管理</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>mine_icon_task_20x20_</string>
+			<key>title</key>
+			<string>我的任务</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>income_20x20_</string>
+			<key>title</key>
+			<string>我的收藏</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>game_center_20x20_</string>
+			<key>title</key>
+			<string>游戏中心</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>sinashow_20x20_</string>
+			<key>title</key>
+			<string>微钱进理财</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>setting_20x20_</string>
+			<key>title</key>
+			<string>设置</string>
+		</dict>
+	</array>
+</array>
+</plist>

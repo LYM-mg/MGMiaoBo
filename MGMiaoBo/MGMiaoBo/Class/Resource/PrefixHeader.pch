@@ -1,0 +1,47 @@
+//
+//  PrefixHeader.pch
+//  MiaowShow
+//
+//  Created by ALin on 16/6/14.
+//  Copyright © 2016年 ALin. All rights reserved.
+//
+
+
+#pragma mark - 自定义NSLog
+
+#ifdef __OBJC__
+
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t  %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+//#define weakSelf(type) __weak typeof(type) weakSelf = type;
+#define weakSelf(type)  __weak typeof(type) weak##type = type;
+#define strongSelf(type)  __strong typeof(type) type = weak##type;
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <IJKMediaFramework/IJKMediaFramework.h>
+#import <Masonry.h>
+#import <MJExtension.h>
+#import <AFNetworking.h>
+#import <MBProgressHUD.h>
+
+// 类扩展
+#import "UIView+LYMExtension.h"
+#import "NSObject+HUD.h"
+#import "UIViewController+HUD.h"
+#import "UIViewController+SLExtension.h"
+#import "UIImage+Extension.h"
+
+// 类继承
+#import "MGGobalConstant.h"
+#import "MGRefreshGifHeader.h"
+#import "MGNetworkTool.h"
+#endif /* PrefixHeader_pch */
+
+
+#endif

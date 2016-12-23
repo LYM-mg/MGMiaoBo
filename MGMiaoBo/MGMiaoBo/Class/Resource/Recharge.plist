@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥6 </string>
+		<key>title</key>
+		<string>6000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥25 </string>
+		<key>title</key>
+		<string>25000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥30 </string>
+		<key>title</key>
+		<string>30000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥98 </string>
+		<key>title</key>
+		<string>98000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥120 </string>
+		<key>title</key>
+		<string>120000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥180 </string>
+		<key>title</key>
+		<string>180000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥240 </string>
+		<key>title</key>
+		<string>240000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥3000 </string>
+		<key>title</key>
+		<string>3000000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥5000 </string>
+		<key>title</key>
+		<string>5000000</string>
+	</dict>
+	<dict>
+		<key>rightTitle</key>
+		<string> ¥10000 </string>
+		<key>title</key>
+		<string>10000000</string>
+	</dict>
+</array>
+</plist>

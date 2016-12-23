@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>mineTask_icon_sign_60x60_</string>
+			<key>leftTitle</key>
+			<string>签到</string>
+			<key>leftSubtitle</key>
+			<string>已连续签到33天</string>
+			<key>rightTitle</key>
+			<string>最多300喵币</string>
+			<key>rightbtnTitle</key>
+			<string>签到</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string>task_image_cat_83x86_</string>
+			<key>leftTitle</key>
+			<string>送礼狂魔</string>
+			<key>leftSubtitle</key>
+			<string>送出23个礼物</string>
+			<key>rightTitle</key>
+			<string>最多300喵币</string>
+			<key>rightbtnTitle</key>
+			<string>进行中...</string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>task_image_guide_305x445_</string>
+			<key>leftTitle</key>
+			<string>瞄屎运</string>
+			<key>leftSubtitle</key>
+			<string>幸运礼物中500倍大奖</string>
+			<key>rightTitle</key>
+			<string>最多1200喵币</string>
+			<key>rightbtnTitle</key>
+			<string>进行中...</string>
+		</dict>
+	</array>
+</array>
+</plist>
