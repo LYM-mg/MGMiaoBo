@@ -1,20 +1,20 @@
 # MGMiaoBo
 
-- #第一步：
+# 第一步：
  - 下载项目
   
-- #第二步：
+# 第二步：
  - 下载framework，拖入项目
  - 链接: https://pan.baidu.com/s/1c2654zu 密码: 6h64
 
-- #第三步：
+# 第三步：
  - 解压framework，拖入项目，运行项目即可
   
-- #第四步：在info.plist添加隐私权限配置
-![在info.plist添加隐私权限配置.png](http://upload-images.jianshu.io/upload_images/1429890-07c83b07220e8e97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)      
-
+# 第四步：在info.plist添加隐私权限配置
+![在info.plist添加隐私权限配置.png](http://upload-images.jianshu.io/upload_images/1429890-07c83b07220e8e97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)      *
+  ****
   
-- #项目图片介绍：
+# 项目图片介绍：
 ![Snip20161026_31.png](http://upload-images.jianshu.io/upload_images/1429890-f3179c973adcc593.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![Snip20161026_32.png](http://upload-images.jianshu.io/upload_images/1429890-45374134c0a0271f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![Snip20161026_33.png](http://upload-images.jianshu.io/upload_images/1429890-21a753055eb4dadf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
