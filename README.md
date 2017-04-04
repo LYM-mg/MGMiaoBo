@@ -1,15 +1,17 @@
 # MGMiaoBo
 
 # 第一步：
- - 下载项目
-  
+ - 下载项目,其实第二步可以不用了，下载下来的代码中已经包含framework，解压即可IJKframework,拖入项目
+---
 # 第二步：
  - 下载framework，拖入项目
  - 链接: https://pan.baidu.com/s/1c2654zu 密码: 6h64
 
+---
 # 第三步：
  - 解压framework，拖入项目，运行项目即可
-  
+
+---
 # 第四步：在info.plist添加隐私权限配置
 ![在info.plist添加隐私权限配置.png](http://upload-images.jianshu.io/upload_images/1429890-07c83b07220e8e97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)      
 ***
