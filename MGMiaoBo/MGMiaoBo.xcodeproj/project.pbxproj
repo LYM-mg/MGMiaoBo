@@ -2187,7 +2187,7 @@
 				TargetAttributes = {
 					3A5006DB1D83B1470002B607 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = H54L47S422;
+						DevelopmentTeam = 2SCJBB22ZQ;
 					};
 				};
 			};
@@ -2668,6 +2668,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2SCJBB22ZQ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2678,7 +2679,7 @@
 				INFOPLIST_FILE = MGMiaoBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ming.MGMiaoBo3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ming.MGMiaoBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -2692,6 +2693,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2SCJBB22ZQ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2702,7 +2704,7 @@
 				INFOPLIST_FILE = MGMiaoBo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ming.MGMiaoBo3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ming.MGMiaoBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

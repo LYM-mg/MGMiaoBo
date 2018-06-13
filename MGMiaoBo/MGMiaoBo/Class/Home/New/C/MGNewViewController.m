@@ -112,12 +112,14 @@ static NSString * const KMGAnchorCell = @"KMGAnchorCell";
         [self.collectionView.mj_footer endRefreshing];
         NSString *statuMsg = responseObject[@"msg"];
         if ([statuMsg isEqualToString:@"fail"]) { /// “下拉数据已经加载完毕, 没有更多数据了”
-            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
-            [self showHint:@"暂时没有更多最新数据"];
-            // 恢复当前页
-            self.currentPage--;
-        }else{  /// “上拉”
+            [self showHint:@"加载失败"];
+        }else if ([statuMsg isEqualToString:@"No data"]){
 //            [responseObject[@"data"][@"list"] writeToFile:@"/Users/apple/Desktop/user.plist" atomically:YES];
+            self.collectionView.mj_footer.hidden = YES;
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+            [self showHint:@"已加载全部数据"];
+            
+        }else { /// “上拉”
             NSArray *result = [MGUser mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
             if (result.count) {
                 self.collectionView.mj_footer.hidden = NO;
@@ -128,7 +130,6 @@ static NSString * const KMGAnchorCell = @"KMGAnchorCell";
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.collectionView.mj_header endRefreshing];
         [self.collectionView.mj_footer endRefreshing];
-        self.currentPage--;
         [self showHint:@"网络异常"];
     }];
 }

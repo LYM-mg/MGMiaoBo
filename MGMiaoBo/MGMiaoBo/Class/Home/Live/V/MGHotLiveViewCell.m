@@ -27,6 +27,7 @@
 {
     BarrageRenderer *_renderer;
     NSTimer * _timer;
+    BOOL _isNoFirst;
 }
 /** 直播播放器 */
 @property (nonatomic, strong) IJKFFMoviePlayerController *moviePlayer;
@@ -258,14 +259,24 @@ bool _isSelected = NO;
         _renderer.canvasMargin = UIEdgeInsetsMake(_anchorView.height+DefaultMargin, 60, 10, 10);
         [self.contentView addSubview:_renderer.view];
         
-        NSSafeObject * safeObj = [[NSSafeObject alloc]initWithObject:self withSelector:@selector(autoSendBarrage)];
+        NSSafeObject *safeObj = [[NSSafeObject alloc]initWithObject:self withSelector:@selector(autoSendBarrage)];
         _timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:safeObj selector:@selector(excute) userInfo:nil repeats:YES];
     }
     return self;
 }
 
-- (void)setLive:(MGHotLive *)live
-{
+- (void)setLive:(MGHotLive *)live{
+    if (_isNoFirst) {
+        if (_timer) {
+            [_timer invalidate];
+            _timer = nil;
+        }
+        
+        if (_renderer) {
+            [_renderer stop];
+            _renderer = nil;
+        }
+    }
     _live = live;
     self.anchorView.live = live;
     [self plarFLV:live.flv placeHolderUrl:live.bigpic];
@@ -316,10 +327,12 @@ bool _isSelected = NO;
     [options setPlayerOptionIntValue:1  forKey:@"videotoolbox"];
     
     // 帧速率(fps) （可以改，确认非标准桢率会导致音画不同步，所以只能设定为15或者29.97）
-    [options setPlayerOptionIntValue:29.97 forKey:@"r"];
+    [options setPlayerOptionIntValue:15 forKey:@"r"];
     // -vol——设置音量大小，256为标准音量。（要设置成两倍音量时则输入512，依此类推
     [options setPlayerOptionIntValue:512 forKey:@"vol"];
-    IJKFFMoviePlayerController *moviePlayer = [[IJKFFMoviePlayerController alloc] initWithContentURLString:flv withOptions:options];
+//    IJKFFMoviePlayerController *moviePlayer = [[IJKFFMoviePlayerController alloc] initWithContentURLString:flv withOptions:options];
+//    
+     IJKFFMoviePlayerController *moviePlayer = [[IJKFFMoviePlayerController alloc] initWithContentURLString:flv withOptions:nil];
     moviePlayer.view.frame = self.contentView.bounds;
     // 填充fill
     moviePlayer.scalingMode = IJKMPMovieScalingModeAspectFill;
@@ -333,6 +346,8 @@ bool _isSelected = NO;
     [moviePlayer prepareToPlay];
     
     self.moviePlayer = moviePlayer;
+    
+    [self.moviePlayer play];
     
     // 设置监听
     [self initObserver];

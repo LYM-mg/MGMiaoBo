@@ -52,7 +52,9 @@ static NSString * const KMGHotLiveViewCell = @"KMGHotLiveViewCell";
 
 #pragma mark - 控制器的生命周期
 - (instancetype)init {
-    return [super initWithCollectionViewLayout:[[MGLiveFlowLayout alloc] init]];
+    self = [super initWithCollectionViewLayout:[[MGLiveFlowLayout alloc] init]];
+    self.collectionView.delegate = self;
+    return self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -74,6 +76,7 @@ static NSString * const KMGHotLiveViewCell = @"KMGHotLiveViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.currentIndex = 1;
     self.navigationItem.title = @"直播";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.collectionView.backgroundColor = [UIColor whiteColor];
@@ -88,8 +91,9 @@ static NSString * const KMGHotLiveViewCell = @"KMGHotLiveViewCell";
     weakSelf(self);
     MGRefreshGifHeader *header = [MGRefreshGifHeader headerWithRefreshingBlock:^{
         [weakself.collectionView.mj_header endRefreshing];
-        weakself.currentIndex++;
-        if (weakself.currentIndex == weakself.lives.count) {
+        [weakself.collectionView.mj_footer endRefreshing];
+        weakself.currentIndex--;
+        if (weakself.currentIndex <= 0) {
             weakself.currentIndex = 0;
         }
         [weakself.collectionView reloadData];
@@ -98,6 +102,21 @@ static NSString * const KMGHotLiveViewCell = @"KMGHotLiveViewCell";
     [header setTitle:@"下拉切换另一个主播" forState:MJRefreshStatePulling];
     [header setTitle:@"下拉切换另一个主播" forState:MJRefreshStateIdle];
     self.collectionView.mj_header = header;
+    
+    
+    MJRefreshBackGifFooter *footer = [MJRefreshBackGifFooter footerWithRefreshingBlock:^{
+        [weakself.collectionView.mj_header endRefreshing];
+        [weakself.collectionView.mj_footer endRefreshing];
+        weakself.currentIndex++;
+        if (weakself.currentIndex >= weakself.lives.count - 1) {
+            weakself.currentIndex = weakself.lives.count - 1;
+        }
+        [weakself.collectionView reloadData];
+    }];
+    footer.stateLabel.hidden = NO;
+    [footer setTitle:@"下拉切换另一个主播" forState:MJRefreshStatePulling];
+    [footer setTitle:@"下拉切换另一个主播" forState:MJRefreshStateIdle];
+    self.collectionView.mj_footer = footer;
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickUser:) name:kMGUserClickNotication object:nil];
@@ -117,8 +136,8 @@ static NSString * const KMGHotLiveViewCell = @"KMGHotLiveViewCell";
 
 #pragma mark <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.lives.count;
-//    return 1;
+//    return self.lives.count;
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -137,12 +156,18 @@ static NSString * const KMGHotLiveViewCell = @"KMGHotLiveViewCell";
     cell.relateLive = self.lives[relateIndex];
     [cell setClickRelatedLive:^{
         weakself.currentIndex += 1;
+        if (weakself.currentIndex == weakself.lives.count) {
+            weakself.currentIndex -= 1;
+        }
         [weakself.collectionView reloadData];
     }];
     
     return cell;
 }
 
+//- (void)collectionView:(UICollectionView *)collectionView  didEndDisplayingCell:(nonnull UICollectionViewCell *)cell forItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+//    self.currentIndex = indexPath.item;
+//}
 
 #pragma mark <UICollectionViewDelegate>
 

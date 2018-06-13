@@ -19,7 +19,8 @@
 
 //#define weakSelf(type) __weak typeof(type) weakSelf = type;
 #define weakSelf(type)  __weak typeof(type) weak##type = type;
-#define strongSelf(type)  __strong typeof(type) type = weak##type;
+#define strongSelf(type)  __strong typeof(type) strong##type = weak##type;
+
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch

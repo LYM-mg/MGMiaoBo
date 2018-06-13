@@ -26,6 +26,8 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.a 
+*.framework
 
 # CocoaPods
 #

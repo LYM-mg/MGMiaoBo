@@ -12,6 +12,6 @@
 /** 直播 */
 @property (nonatomic, strong) NSArray *lives;
 /** 当前的index */
-@property (nonatomic, assign) NSUInteger currentIndex;
+@property (nonatomic, assign) int currentIndex;
 
 @end
